@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "hospital_backend": {
+      "main": "src/hospital_backend/main.mo",
+      "type": "motoko"
+    },
+    "hospital_frontend": {
+      "dependencies": [
+        "hospital_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/hospital_frontend/src/index.html"
+      },
+      "source": [
+        "src/hospital_frontend/assets",
+        "dist/hospital_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
